@@ -4,10 +4,10 @@ angular.module('zgzbus', ['ngRoute'])
     .config(function ($routeProvider) {
         $routeProvider
             .when('/', {
-                template: '<main-component></main-component>'
+                template: '<app-main></app-main>'
             })
             .when('/map', {
-                template: '<map-component></map-component>'
+                template: '<app-map></app-map>'
             })
             .otherwise({
                 redirectTo: '/'
