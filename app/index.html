@@ -23,7 +23,7 @@
 
     <!-- endbuild -->
 </head>
-<body ng-app="zgzbus">
+<body>
 <!--[if lt IE 7]>
 <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser
     today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better
@@ -36,25 +36,10 @@
 <![endif]-->
 
 <!-- Add your site or application content here -->
-<div class="container" ng-view></div>
+<app-root></app-root>
 
 <!-- Zone.js for Angular -->
 <script src="../node_modules/zone.js/dist/zone.js"></script>
-
-<!-- AngularJS -->
-<script src="../node_modules/angular/angular.min.js"></script>
-<script src="../node_modules/angular-route/angular-route.min.js"></script>
-<script src="../node_modules/angular-resource/angular-resource.min.js"></script>
-<script src="../node_modules/angular-sanitize/angular-sanitize.min.js"></script>
-
-
-<!-- build:js scripts/scripts.js -->
-<script src="scripts/app.js"></script>
-<script src="scripts/components/main.component.js"></script>
-<script src="scripts/components/map.component.js"></script>
-<script src="scripts/services/BusTimesGetter.js"></script>
-<script src="scripts/services/BusStopsGetter.js"></script>
-<!-- endbuild -->
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <!--<script>-->

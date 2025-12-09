@@ -8,18 +8,9 @@
     "@angular/platform-browser": "^18.2.14",
     "@angular/platform-browser-dynamic": "^18.2.14",
     "@angular/router": "^18.2.14",
-    "@angular/upgrade": "^18.2.14",
-    "angular": "1.8.3",
-    "angular-cookies": "1.8.3",
-    "angular-resource": "1.8.3",
-    "angular-route": "1.8.3",
-    "angular-sanitize": "1.8.3",
-    "es5-shim": "~2.0.8",
-    "json3": "~3.2.4",
     "rxjs": "^7.8.2",
     "tslib": "^2.8.1",
-    "zone.js": "~0.14.10",
-    "zurb-foundation-npm": "^0.0.1"
+    "zone.js": "~0.14.10"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^18.2.21",
@@ -27,10 +18,6 @@
     "@angular/compiler": "^18.2.14",
     "@angular/compiler-cli": "^18.2.14",
     "@eslint/js": "^9.39.1",
-    "@types/angular": "^1.8.0",
-    "@types/angular-route": "^1.7.0",
-    "angular-mocks": "1.8.3",
-    "chai": "~1.8.1",
     "eslint": "^9.39.1",
     "grunt": "~0.4.1",
     "grunt-cli": "^1.5.0",
@@ -72,8 +59,7 @@
     "start": "ng serve",
     "build": "ng build",
     "build:prod": "ng build --configuration production",
-    "test": "grunt test --verbose",
-    "lint": "eslint app/scripts/**/*.{js,ts} src/**/*.ts",
-    "lint:fix": "eslint app/scripts/**/*.{js,ts} src/**/*.ts --fix"
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix"
   }
 }
