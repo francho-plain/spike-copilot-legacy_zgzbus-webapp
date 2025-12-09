@@ -73,7 +73,7 @@
     "build": "ng build",
     "build:prod": "ng build --configuration production",
     "test": "grunt test --verbose",
-    "lint": "eslint app/scripts/**/*.{js,ts}",
-    "lint:fix": "eslint app/scripts/**/*.{js,ts} --fix"
+    "lint": "eslint app/scripts/**/*.{js,ts} src/**/*.ts",
+    "lint:fix": "eslint app/scripts/**/*.{js,ts} src/**/*.ts --fix"
   }
 }
