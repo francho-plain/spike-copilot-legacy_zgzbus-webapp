@@ -1,0 +1,86 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "zgzbus-webapp": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/zgzbus-webapp",
+            "index": "app/index.html",
+            "main": "src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "tsconfig.app.json",
+            "assets": [
+              "app/img",
+              "app/manifest.webapp",
+              "app/robots.txt"
+            ],
+            "styles": [
+              "src/styles.css",
+              "app/styles/main.scss"
+            ],
+            "scripts": [
+              "node_modules/angular/angular.min.js",
+              "node_modules/angular-route/angular-route.min.js",
+              "node_modules/angular-resource/angular-resource.min.js",
+              "node_modules/angular-sanitize/angular-sanitize.min.js",
+              "app/scripts/app.js",
+              "app/scripts/components/main.component.js",
+              "app/scripts/components/map.component.js",
+              "app/scripts/services/BusTimesGetter.js",
+              "app/scripts/services/BusStopsGetter.js"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "zgzbus-webapp:build:production"
+            },
+            "development": {
+              "buildTarget": "zgzbus-webapp:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        }
+      }
+    }
+  }
+}

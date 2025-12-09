@@ -1,26 +1,41 @@
 {
+  "compileOnSave": false,
   "compilerOptions": {
-    "target": "ES5",
-    "module": "commonjs",
-    "lib": ["ES2015", "DOM"],
-    "allowJs": true,
-    "checkJs": false,
-    "outDir": ".tmp/scripts",
-    "rootDir": "./app/scripts",
-    "removeComments": true,
-    "strict": false,
-    "noImplicitAny": false,
-    "strictNullChecks": false,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
+    "strict": false,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": false,
+    "noFallthroughCasesInSwitch": true,
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
     "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "types": ["angular"]
+    "importHelpers": true,
+    "target": "ES2022",
+    "module": "ES2022",
+    "useDefineForClassFields": false,
+    "lib": [
+      "ES2022",
+      "dom"
+    ],
+    "types": ["angular"],
+    "paths": {
+      "@app/*": ["src/app/*"]
+    }
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": false,
+    "strictInputAccessModifiers": false,
+    "strictTemplates": false
   },
   "include": [
-    "app/scripts/**/*.ts",
-    "app/scripts/**/*.js"
+    "src/**/*.ts",
+    "app/scripts/**/*.ts"
   ],
   "exclude": [
     "node_modules",

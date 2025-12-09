@@ -68,6 +68,10 @@
     "node": ">=0.8.0"
   },
   "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "build:prod": "ng build --configuration production",
     "test": "grunt test --verbose",
     "lint": "eslint app/scripts/**/*.{js,ts}",
     "lint:fix": "eslint app/scripts/**/*.{js,ts} --fix"
