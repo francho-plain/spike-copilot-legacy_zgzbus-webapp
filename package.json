@@ -12,6 +12,8 @@
     "zurb-foundation-npm": "^0.0.1"
   },
   "devDependencies": {
+    "@types/angular": "^1.8.0",
+    "@types/angular-route": "^1.7.0",
     "angular-mocks": "1.8.3",
     "chai": "~1.8.1",
     "grunt": "~0.4.1",
@@ -34,6 +36,7 @@
     "grunt-open": "~0.2.0",
     "grunt-regarde": "~0.1.1",
     "grunt-rev": "~0.1.0",
+    "grunt-ts": "^6.0.0-beta.22",
     "grunt-usemin": "~2.0.0",
     "karma": ">=0.8",
     "karma-commonjs": "0.0.2",
@@ -41,7 +44,8 @@
     "karma-phantomjs-launcher": "~0.1.0",
     "karma-requirejs": "~0.1.0",
     "matchdep": "~0.3.0",
-    "phantomjs": "~1.9.2-2"
+    "phantomjs": "~1.9.2-2",
+    "typescript": "^5.0.0"
   },
   "engines": {
     "node": ">=0.8.0"
