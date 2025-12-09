@@ -281,6 +281,13 @@ Ready to proceed? [yes/no]
 Proposed commit message:
 [type]([scope]): [description]
 
+[Detailed description]
+
+User prompts:
+- [User prompt 1]
+- [User prompt 2]
+(Exclude interactive yes/no responses)
+
 Ready to commit? [yes/no]
 ```
 
@@ -292,6 +299,18 @@ Ready to commit? [yes/no]
 
 Next step: [Brief description of next logical step]
 Proceed? [yes/no]
+```
+
+**Commit Message Format:**
+All commits MUST include user prompts (excluding yes/no responses) in the commit body:
+```
+[type]([scope]): [description]
+
+[Detailed changes description]
+
+User prompts:
+- [First non-yes/no user prompt since last commit]
+- [Second non-yes/no user prompt since last commit]
 ```
 
 **Migration Steps:**
