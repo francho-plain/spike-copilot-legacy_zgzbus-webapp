@@ -26,8 +26,6 @@
               "app/robots.txt"
             ],
             "styles": [
-              "app/styles/firefoxos-building-blocks/style/headers.css",
-              "app/styles/firefoxos-building-blocks/style_unstable/progress_activity.css",
               "app/styles/main.scss"
             ],
             "scripts": []
