@@ -7,8 +7,8 @@
       "projectType": "application",
       "schematics": {},
       "root": "",
-      "sourceRoot": "app",
-      "prefix": "app",
+      "sourceRoot": "src",
+      "prefix": "src",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -21,12 +21,14 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              "app/img",
-              "app/manifest.webapp",
-              "app/robots.txt"
+              "src/assets",
+              "src/img",
+              "src/favicon.ico",
+              "src/manifest.webapp",
+              "src/robots.txt"
             ],
             "styles": [
-              "app/styles/main.scss"
+              "src/styles.scss"
             ],
             "scripts": []
           },
