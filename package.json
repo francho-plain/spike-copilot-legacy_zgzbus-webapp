@@ -12,10 +12,12 @@
     "zurb-foundation-npm": "^0.0.1"
   },
   "devDependencies": {
+    "@eslint/js": "^9.39.1",
     "@types/angular": "^1.8.0",
     "@types/angular-route": "^1.7.0",
     "angular-mocks": "1.8.3",
     "chai": "~1.8.1",
+    "eslint": "^9.39.1",
     "grunt": "~0.4.1",
     "grunt-cli": "^1.5.0",
     "grunt-contrib-clean": "~0.5.0",
@@ -45,12 +47,15 @@
     "karma-requirejs": "~0.1.0",
     "matchdep": "~0.3.0",
     "phantomjs": "~1.9.2-2",
-    "typescript": "^5.0.0"
+    "typescript": "^5.0.0",
+    "typescript-eslint": "^8.49.0"
   },
   "engines": {
     "node": ">=0.8.0"
   },
   "scripts": {
-    "test": "grunt test --verbose"
+    "test": "grunt test --verbose",
+    "lint": "eslint app/scripts/**/*.{js,ts}",
+    "lint:fix": "eslint app/scripts/**/*.{js,ts} --fix"
   }
 }

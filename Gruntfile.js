@@ -124,6 +124,11 @@ module.exports = function (grunt) {
         }]
       }
     },
+    ts: {
+      default: {
+        tsconfig: './tsconfig.json'
+      }
+    },
     compass: {
       options: {
         sassDir: '<%= yeoman.app %>/styles',
@@ -282,6 +287,7 @@ module.exports = function (grunt) {
     'jshint',
     'test',
     'coffee',
+    'ts',
     'compass:dist',
     'useminPrepare',
     'imagemin',
