@@ -6,7 +6,7 @@ angular.module('zgzbus')
         controller: MapComponentController
     });
 
-function MapComponentController(BusStopsGetter) {
+function MapComponentController(BusStopsService) {
     var $ctrl = this;
 
     $ctrl.mapPoints = {};
@@ -15,7 +15,7 @@ function MapComponentController(BusStopsGetter) {
     $ctrl.getMapPoints = function () {
         setProgressOn();
 
-        BusStopsGetter.callWebService()
+        BusStopsService.getBusStops()
             .then(function (data) {
                 angular.copy(data, $ctrl.mapPoints);
                 setProgressOff();

@@ -36,8 +36,7 @@
               "app/scripts/app.js",
               "app/scripts/components/main.component.js",
               "app/scripts/components/map.component.js",
-              "app/scripts/services/BusTimesGetter.js",
-              "app/scripts/services/BusStopsGetter.js"
+              "app/scripts/services/BusTimesGetter.js"
             ]
           },
           "configurations": {
