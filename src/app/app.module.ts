@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { UpgradeModule } from '@angular/upgrade/static';
 import { BusStopsService } from './services/bus-stops.service';
+import { BusTimesService } from './services/bus-times.service';
 
 @NgModule({
   imports: [
@@ -11,7 +12,8 @@ import { BusStopsService } from './services/bus-stops.service';
     UpgradeModule
   ],
   providers: [
-    BusStopsService
+    BusStopsService,
+    BusTimesService
   ]
 })
 export class AppModule {

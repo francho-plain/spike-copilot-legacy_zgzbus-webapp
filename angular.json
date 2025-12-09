@@ -35,8 +35,7 @@
               "node_modules/angular-sanitize/angular-sanitize.min.js",
               "app/scripts/app.js",
               "app/scripts/components/main.component.js",
-              "app/scripts/components/map.component.js",
-              "app/scripts/services/BusTimesGetter.js"
+              "app/scripts/components/map.component.js"
             ]
           },
           "configurations": {

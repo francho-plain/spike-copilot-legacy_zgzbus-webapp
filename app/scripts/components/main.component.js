@@ -6,7 +6,7 @@ angular.module('zgzbus')
         controller: MainComponentController
     });
 
-function MainComponentController($timeout, BusTimesGetter) {
+function MainComponentController($timeout, BusTimesService) {
     var $ctrl = this;
 
     $ctrl.busInfo = {
@@ -21,7 +21,7 @@ function MainComponentController($timeout, BusTimesGetter) {
     $ctrl.getBusTimeTable = function () {
         setProgressOn();
 
-        BusTimesGetter.callWebService($ctrl.busInfo.busStop)
+        BusTimesService.getBusTimes($ctrl.busInfo.busStop)
             .then(function (data) {
                 angular.copy(data, $ctrl.busInfo);
                 setProgressOff();
