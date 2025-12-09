@@ -17,7 +17,27 @@ node_modules
 atlassian-ide-plugin.xml
 .idea
 
+# Build outputs
 dist
 .tmp
 .sass-cache
 app/components
+
+# Angular
+.angular/
+.angular/cache/
+*.ngfactory.ts
+*.ngsummary.json
+*.metadata.json
+
+# TypeScript
+*.tsbuildinfo
+out-tsc/
+
+# Test coverage
+coverage/
+
+# Environment files
+.env
+.env.local
+.env.*.local
