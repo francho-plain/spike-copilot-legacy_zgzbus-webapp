@@ -1,0 +1,40 @@
+<section class="skin-dark" role="region">
+  <section class="skin-dark" role="region">
+    <header>
+      <h1>ZgzBus</h1>
+
+      <form name="form">
+        <input
+          type="number"
+          [(ngModel)]="busInfo.busStop"
+          name="busStop"
+          min="1"
+          max="999"
+          (ngModelChange)="getBusTimeTable()"
+        />
+      </form>
+    </header>
+  </section>
+  <section role="region">
+    <progress *ngIf="inProgress" value="0" max="100" class="pack-activity"></progress>
+  </section>
+</section>
+
+<div class="row">
+  <div class="small-4 large-4 columns">
+    <h2 *ngIf="busInfo.title">{{ busInfo.title }}</h2>
+  </div>
+  <div class="small-6 large-4 columns" *ngIf="busInfo.error">{{ busInfo.error }}</div>
+</div>
+
+<div *ngIf="!busInfo.frequencies.length" class="first-screen"></div>
+
+<div
+  class="row resultado"
+  *ngFor="let busFreq of busInfo.frequencies | slice:0:100"
+  [ngClass]="getDistanceClass(busFreq.timeToArrive)"
+>
+  <div class="small-4 large-4 columns poste">{{ busFreq.bus }}</div>
+  <div class="small-4 large-4 columns tiempo">{{ busFreq.timeToArrive }}</div>
+  <div class="small-4 large-4 columns direccion">{{ busFreq.destiny }}</div>
+</div>

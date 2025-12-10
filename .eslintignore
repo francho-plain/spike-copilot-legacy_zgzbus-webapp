@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.tmp/
+app/components/
+test/
+*.min.js
+Gruntfile.js
+karma*.js
